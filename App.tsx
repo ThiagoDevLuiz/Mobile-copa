@@ -2,11 +2,13 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
-  const name = "Renata";
+  const name = "Thiago";
+  const age = "23"
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{name} é linda!</Text>
+      <Text style={styles.text}>{name} se cadastrou</Text>
+      <Text style={styles.text}>{name} tem {age} anos.</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -22,6 +24,6 @@ const styles = StyleSheet.create({
 
   text: {
     fontSize: 50,
-    color: "#dedede",
+    color: "green",
   },
 });
