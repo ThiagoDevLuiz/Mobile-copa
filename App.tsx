@@ -1,16 +1,18 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+
+import { NativeBaseProvider, Text, Center } from "native-base";
 
 export default function App() {
-  const name = "Thiago";
-  const age = "23"
-
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>{name} se cadastrou</Text>
-      <Text style={styles.text}>{name} tem {age} anos.</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NativeBaseProvider>
+      <Center flex={1} bgColor="fuchsia.400">
+        <Text color="black" fontSize="25">
+          Hello React Native!
+        </Text>
+        <StatusBar style="auto" />
+      </Center>
+    </NativeBaseProvider>
   );
 }
 
@@ -22,8 +24,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-  text: {
-    fontSize: 50,
-    color: "green",
+  title: {
+    fontSize: 25,
+    color: "#fff",
   },
 });
